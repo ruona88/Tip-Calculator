@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link type = "text/css" href = "style.css" rel = "stylesheet" >
+    <link rel = "stylesheet" type = "text/css" href = "mediaqueries.css">
+</head>
+<body>
+
+    <!--This is just for the logo-->
+    <main>
+        <!--Container for the logo-div-->
+        <div class = "logo-container" role = "figure">
+            <img src = "Assets/logo.svg" alt = "" >
+        </div>
+
+        <!--The calculator div-->
+        <div class = "calculator">
+            <div class = "buttons-forms">
+                <form action = "" method = "post">
+                    <label for = "bill-amount" class = "label-bill-amount">Bill   <span id = "zero-bill">Can't be zero</span></label>
+                    <input type = "number" id = "bill-amount" name = "bill-amount" class = "bill-amount" step = "any" placeholder = "0">
+                </form>
+
+                <p class = "p-element" >Select Tip %</p>
+                <!--Grid container for the buttons-->
+                <div class = "grid-container">
+                    <button class = "five-percent dark-blue-btn calc-btn"  id = "five-percent" value = "5%">5%</button>
+                    <button class = "ten-percent dark-blue-btn calc-btn" id = "ten-percent" value = "10%">10%</button>
+                    <button class = "fifteen-percent deep-cyan-btn calc-btn" id = "fifteen-percent" value = "15%">15%</button>
+                    <button class = "twenty-five-percent dark-blue-btn calc-btn" id = "twenty-five-percent" value = "25%">25%</button>
+                    <button class = "fifty-percent dark-blue-btn calc-btn" id = "fifty-percent" value = "50%">50%</button>
+                    <!--<button class = "custom light-cyan-btn" >Custom</button>-->
+                    <form method = "POST" action = "">
+                        <input type = "number" name = "custom-tip" placeholder = "Custom" id = "custom-input" >
+                    </form>
+                </div>
+
+                <p class = "p-element">Number of People <span id = "zero-people">Can't be zero</span></p>
+
+                <form action = "" method = "post" >
+                    <input type = "number" name = "number-of-people" class = "people-number" id = "people-number" placeholder = "0" step = "any">
+                </form>
+            </div>
+
+
+            <div class = "display-results">
+                <div class = "tip-amount">
+                    <p>Tip amount <br><span class = "green-text" >/ person</span></p>
+                    <p class = "green-text result-field" >$<span id = "tip-result">0.00</span></p>
+                </div>
+                <div class = "total">
+                    <p>Total <br><span class = "green-text" >/ person</span></p>
+                    <p class = "green-text result-field" >$<span id = "total-result" >0.00</span></p>
+                </div>
+                <button id = "reset-btn">Reset</button>
+            </div>
+        </div>
+
+    </main>
+       
+</body>
+<script src = "script.js"></script>
+</html> 
